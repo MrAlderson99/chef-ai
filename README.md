@@ -10,16 +10,34 @@ This project is designed to be flexible. You can run it as a standalone static w
 
 This version runs entirely in your browser using React. It communicates directly with the Google Gemini API.
 
-**How to use:**
-1.  Deploy the code to GitHub Pages (or run `npm start` locally).
+**How to Deploy to GitHub Pages:**
+
+1.  **Create a Repository:** Create a new public repository on GitHub (e.g., `chef-gourmet-ai`).
+2.  **Push Code:** Push all these files to your new repository.
+3.  **Install Dependencies:**
+    Run this in your terminal:
+    ```bash
+    npm install
+    ```
+4.  **Configure Base URL:**
+    Open `vite.config.ts` and change the `base` property to match your repository name:
+    ```ts
+    // If your repo is https://github.com/yourname/my-chef
+    base: '/my-chef/',
+    ```
+5.  **Deploy:**
+    Run this command to build and deploy to the `gh-pages` branch:
+    ```bash
+    npm run deploy
+    ```
+6.  **Enable Pages:**
+    Go to your GitHub Repository Settings -> Pages. Ensure "Source" is set to "Deploy from a branch" and select `gh-pages` / `root`.
+
+**Usage:**
+1.  Open your deployed link (e.g., `https://yourname.github.io/my-chef/`).
 2.  Click the **Settings (⚙️)** icon in the top right.
 3.  Enter your **Google Gemini API Key**.
     *   *Note: Your key is stored in your browser's LocalStorage and is never sent to our servers.*
-
-**Deploying to GitHub Pages:**
-1.  Update `package.json` with `"homepage": "https://yourusername.github.io/repo-name"`.
-2.  Run `npm run build`.
-3.  Deploy the `dist` or `build` folder.
 
 ---
 
@@ -57,7 +75,7 @@ This version allows you to run a Python server (`FastAPI`) equipped with `LangCh
 
 ## 🛠 Tech Stack
 
-*   **Frontend:** React 19, TypeScript, TailwindCSS, Recharts.
+*   **Frontend:** React 18, TypeScript, TailwindCSS, Recharts, Vite.
 *   **AI (Web):** Google Gemini 2.5 Flash & Pro.
 *   **Backend (Optional):** FastAPI, LangChain, ChromaDB.
 
