@@ -1,0 +1,7 @@
+{
+  "name": "Chef Gourmet IA",
+  "description": "A luxury AI cooking assistant that turns your available ingredients or fridge photos into gourmet recipes.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
